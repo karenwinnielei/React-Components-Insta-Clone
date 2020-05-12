@@ -11,7 +11,9 @@ import PostsPage from './components/PostsContainer/PostsPage'
 import SearchBar from './components/SearchBar/SearchBarContainer'
 
 
+
 const App = () => {
+  
 
   return (
     <div className="App">
