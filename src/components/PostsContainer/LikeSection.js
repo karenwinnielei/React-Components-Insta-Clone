@@ -4,7 +4,9 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons'
+import dummyData from "../../dummy-data";
 
+console.log(dummyData[0].likes)
 const LikeSection = props => {
   return (
     <div>
@@ -19,6 +21,9 @@ const LikeSection = props => {
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
+      {/* {dummyData.likes.map((userObj) => {
+        return <Post />
+      })} */}
       <p className="like-number">27 likes</p>
     </div>
   )

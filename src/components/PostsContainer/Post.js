@@ -11,7 +11,7 @@ import dummyData from "../../dummy-data";
 const Post = props => {
   // set up state for the likes
   const {post} = props
-  const [likes, setLikes] = useState(dummyData)
+ 
   return (
     <div className="post-border">
       <PostHeader
