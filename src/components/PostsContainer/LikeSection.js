@@ -4,10 +4,14 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons'
-import dummyData from "../../dummy-data";
 
-console.log(dummyData[0].likes)
 const LikeSection = props => {
+  // console.log(props.likes)
+    const [likes, setLikes] = useState(props.likes)
+  const clickHandler = () => {
+    setLikes(likes + 1)
+  // }
+  
   return (
     <div>
       <div
@@ -15,13 +19,13 @@ const LikeSection = props => {
         key="likes-icons-container"
       >
         <div className="like-section-wrapper">
-          <FontAwesomeIcon icon={faHeart} onClick = {props.clickHandler} />
+          <FontAwesomeIcon icon={faHeart} onClick = {clickHandler} />
         </div>
         <div className="like-section-wrapper">
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className="like-number">{props.likes} likes</p>
+      <p className="like-number">27 likes</p>
     </div>
   )
 };
